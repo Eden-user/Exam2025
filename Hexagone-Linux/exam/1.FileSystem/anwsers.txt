@@ -1,0 +1,7 @@
+A quoi servent les formats de fichiers (.png, .txt, .jpeg) ?
+
+Permet de définir le type de données qu'il contient, leur organisation afin que l'ordinateur puisse le décoder et le lire.
+
+A quoi sert la ligne #!/usr/bin/bash ? Quelles différences avec le lancement du script via "bash script" ?
+
+L'objectif de shebang est de donner le chemin complet du shell, afin qu'il puisse être localisé partout où le script est exécuté. Dans le cas contraire il faudrait rendre le fichier executaable manuellement.

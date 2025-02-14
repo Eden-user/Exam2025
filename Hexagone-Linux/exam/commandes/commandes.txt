@@ -1,0 +1,10 @@
+head -5 too_long
+
+tail -7 too_long
+
+sort -n -r too_long | head -3 
+
+sed -n "43 p" too_long
+
+sed -i -r 's/.*Ligne 42.*/The Ultima
+te Question of Life, the Universe and Everything/g' too_long

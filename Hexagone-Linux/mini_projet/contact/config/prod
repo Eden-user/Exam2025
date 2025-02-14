@@ -1,0 +1,2 @@
+echo "Production env activated"
+export LOGFILE="$BASE_DIR/logs"

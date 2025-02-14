@@ -1,0 +1,9 @@
+chown toto shared
+chown toto owned_by_toto
+chmod u=rwx owned_by_toto
+
+Cette commande permet aux membres du groupe propriétaire d'executer le fichier owned_by_toto
+
+Cette commande change l'utilisateur et le groupe du fichier owned_by_toto à l'utilisateur root et au groupe root.
+
+

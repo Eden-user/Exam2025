@@ -1,0 +1,24 @@
+cat /etc/passwd
+
+sudo useradd Hanna
+
+groups Hanna
+
+sudo groupadd -g 123456 Shared
+
+sudo usermod -G Shared eden-user
+
+sudo usermod -G Shared Hanna
+
+le mot sudo accorde l'accès root le temps de cette commande, il permet d'avoir les permisions admin. Il permet de forcer le passage.
+
+Oui, a partir du moment où l'utilisateur root leur en a donné la permission, ou s'ils font partie des sudoers.
+
+il faut ajouter dans le fichier /etc/sudoers une ligne : Hanna ALL = (ALL) apt install
+
+Il faut l'ajouter aux sudoers : usermod -aG sudo Hanna
+
+Il vaut mieux eviter d'utiliser root en permanence dun'e part pour éviter des erreurs fatales au niveau de l'OS et du système, et d'autre part pour des raisons de sécurité.
+
+
+

@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+. "$BASE_DIR/api"
+
+menu(){
+	while true; do
+		read -p "Select one of the following options : Create(C) Retrieve(R) Update(U) Delete(D) List(L) or Quit(Q) : " user_choice
+		case $user_choice in
+			C) created=$(create) && $LOGGER $created;;
+			R) retrieve;;
+			U) update;;
+			D) delete;;
+			L) list;;
+			Q) echo "Goodbye" && exit 0 ;;
+			*) echo "Choices are C, R, U, D, L, Q";;
+		esac
+	done
+}
+
+main(){
+	if [[ $1 == 0 ]]; then
+		menu
+	fi
+}
+
+main $#

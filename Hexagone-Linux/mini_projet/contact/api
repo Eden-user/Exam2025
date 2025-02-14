@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+SEP=";"
+
+get_next_id(){
+	echo awk -F ";" '{print $1}' $DB_FILE |sort -n |tail -1	| awk '{print $1+1}'
+}
+create() {
+	echo "Creating a new contact"
+	read -p "First name : "	first_name
+	read -p "Last name : " last_name
+	read -p "Birthdate (YYYY-MM-DD) : " birth_date
+	read -p "Phone number : " phone_number
+	read -p "Email : " email
+	
+	id=$(get_next_id)
+	
+	echo "$id $SEP $first_name $SEP $last_name $SEP $birthdate $SEP $phone_number $SEP $email" >> $DB_FILE
+	return "Contact n.$id $first_name $last_name added succesfully."
+	
+}
+
+retrieve(){
+echo "retrieve"
+}
+
+update (){
+echo "update"
+}
+
+delete (){
+echo "delete"
+}
+
+list (){
+echo "list"
+}

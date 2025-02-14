@@ -1,0 +1,9 @@
+La commande systemctl
+
+systemctl + start
+
+systemctl + stop
+
+Restart permet de redémarrer un service en cous d'execution, mais en redémarrant.Plus rapide de Stop+start.
+
+

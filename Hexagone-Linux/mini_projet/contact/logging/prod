@@ -1,0 +1,6 @@
+# Si $LOGFILE n'existe pas, créer le avec le bon chmod
+# if [[ -f $LOGFILE ]]; then
+# create $LOGFILE with chmod 660
+# fi
+
+echo "$(date) : $1" >> $LOGFILE
