@@ -1,4 +1,8 @@
 cat /etc/passwd
+-> Au lieu d'afficher le contenu du fichier brut, on préferera souvent utiliser getent passwd (qui utilise la base de données systeme).
+On abstrait le fait que les utilisateus sont stockés dans un fichier pour ne pas être tenté de modifier le fichier directement au lieu
+des programmes comme useradd etc (et donc de faire des erreurs potentielles).
+Encore une fois cela dépendra toujours du contexte et de ce que vous êtes en train de faire.
 
 sudo useradd Hanna
 
@@ -20,5 +24,8 @@ Il faut l'ajouter aux sudoers : usermod -aG sudo Hanna
 
 Il vaut mieux eviter d'utiliser root en permanence dun'e part pour éviter des erreurs fatales au niveau de l'OS et du système, et d'autre part pour des raisons de sécurité.
 
+
+Le point important à noter est qu'utiliser sudo élève les droits mais uniquement pour la commande qui suit
+et surtout cela demandera le mot de passe contrairement à root qui peut tout supprimer sans qu'on ne lui demande aucune vérification
 
 

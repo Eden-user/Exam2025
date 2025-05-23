@@ -48,3 +48,29 @@ main() {
 main
 
 end_game
+
+
+# N'hésitez pas à décomposer encore plus (tant que ca fait sens)
+# Par exemple au lieu de
+for ((i = 1; i <= nb; i++)); do
+    echo "Creating a new player"
+    read -p "First name : " first_name
+    echo "You'll be the Player $i"
+    joueurs[$i]="$first_name"
+    scores[$i]=$game
+    echo "${joueurs[$i]} added succesfully."
+done
+
+
+create_player() {
+    echo "Creating a new player"
+    read -p "First name : " first_name
+    echo "You'll be the Player $1"
+    joueurs[$1]="$first_name"
+    scores[$1]=$game
+    echo "${joueurs[$1]} added succesfully."
+}
+
+for ((i = 1; i <= nb; i++)); do
+    create_player $i
+done
