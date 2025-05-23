@@ -46,3 +46,6 @@ show_scores() {
 end_game() {
 	>players.txt
 }
+
+
+# Top, je n'ai pas vérifié le fonctionnement mais la décomposition en fonctions les plus simples possibles et bien nommées font que le tout est simple à comprendre
