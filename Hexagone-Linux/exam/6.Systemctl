@@ -6,4 +6,6 @@ systemctl + stop
 
 Restart permet de redémarrer un service en cous d'execution, mais en redémarrant.Plus rapide de Stop+start.
 
-
+Du coup on utilisera restart surtout dans des cas où on veut prendre en compte des modifications de config.
+Il y a quelques subtilités entre restart et stop + start car en réalité restart ne stop pas complètement le service, cela
+peut avoir un impact par exemple pour un service de gestionnaire de base de données cela va reset la connection à la base de données
